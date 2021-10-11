@@ -14,6 +14,9 @@ class ContactFilesController < ApplicationController
   end
 
   def contact_file_params
-    params.require(:contact_file).permit(:file)
+    params.require(:contact_file).permit(
+      :file, :column_email, :column_franchise, :column_credit_card,
+      :column_address, :column_phone, :column_birthday, :column_name
+    )
   end
 end

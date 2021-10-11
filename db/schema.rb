@@ -44,8 +44,13 @@ ActiveRecord::Schema.define(version: 2021_10_10_230229) do
   end
 
   create_table "contact_files", force: :cascade do |t|
-    t.string "filename"
-    t.string "url"
+    t.string "column_name", null: false
+    t.string "column_birthday", null: false
+    t.string "column_phone", null: false
+    t.string "column_address", null: false
+    t.string "column_credit_card", null: false
+    t.string "column_franchise", null: false
+    t.string "column_email", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
